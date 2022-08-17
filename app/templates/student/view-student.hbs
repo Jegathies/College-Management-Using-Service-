@@ -1,0 +1,53 @@
+<div class="container" id="blur">
+    <div class="wrap-it">
+    <select id="year"  class="box2" onchange={{action 'getValueOnClick' }}>
+        <option value="1">Select Joining Year</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+        <option value="2022">2022</option>
+    </select><br>
+    <select id="depart" class="box3" onchange={{action 'getValueOnClick' }} >
+        <option value="1">select department</option>
+        {{#each model.departModel as |dep|}}
+            <option value={{dep}} >{{dep}}</option>
+        {{/each}}
+    </select>
+    
+
+{{!-- {{input  value="sort" type="button" class="button6" click=(action 'toggleSort' )}} --}}
+
+</div>
+</div>
+<div id="card-container">
+
+     {{#if hasDep}}
+         {{#each sortByDepartment as |result|}}
+             <div style="text-decoration:none;">{{#link-to  'getStudentDetail' result.id }}
+             {{hide-details action=(action "blur")  result=result }}
+             {{/link-to}}</div>
+        {{!-- {{show-student result=result}} --}}
+         {{/each}}
+
+     {{else}}
+
+         {{#each model.studentModel as |result|}}
+         {{#link-to 'getStudentDetail' result.id}}
+         {{log result.id}}
+         {{log "hello"}}
+             {{hide-details action=(action "blur")  result=result}}
+        {{/link-to}}
+        {{!-- {{show-student result=result}} --}}
+         {{/each}}
+
+     {{/if}}
+</div>
+{{log model.param}}
+
+
+
+
+{{log model.data}}
+
+{{outlet}}

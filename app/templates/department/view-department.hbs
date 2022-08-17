@@ -1,0 +1,16 @@
+<h2 style="text-align: center;">DEPARTMENTS LIST</h2>
+{{input class="dep-button" id="toggleButton" value="Get Number of Students in Department" type="button" click=(action 'notify')}}
+{{#if values}}
+
+{{#each result as |depart|}}
+    {{show-department-count depart=depart}}
+{{/each}}
+
+{{else}}
+
+{{#each model as |result1|}}
+    {{show-department result1=result1}}
+{{/each}}
+
+{{/if}}
+{{outlet}}

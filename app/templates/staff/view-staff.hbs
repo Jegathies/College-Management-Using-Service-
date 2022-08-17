@@ -1,0 +1,30 @@
+    <br><br>
+    <div class="wrap-it">
+    <select id="depart" class="box1" onchange={{action 'getValue'}} >
+        <option value="1">select department</option>
+        {{#each model.departModel as |dep|}}
+            <option value={{dep}} >{{dep}}</option>
+        {{/each}}
+    </select>
+{{!-- {{input  value="sort" type="button" class="button2" click=(action 'getValue' )}} --}}
+</div>
+{{#if hasDep}}
+    {{#each sortByDepartment as |result|}}
+        {{show-staff result=result}}
+        {{log result}}
+        {{!-- {{show-student result=result}} --}}
+    {{/each}}
+
+{{else}}
+
+    {{#each model.staffModel as |result|}}
+        {{show-staff result=result}}
+        {{!-- {{show-student result=result}} --}}
+    {{/each}}
+
+{{/if}}
+
+    
+    
+    
+    {{outlet}}

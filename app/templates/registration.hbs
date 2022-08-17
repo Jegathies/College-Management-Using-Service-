@@ -1,0 +1,24 @@
+
+<div class="form">
+    
+<form class="form2" {{action "sendRequest"  on="submit" }} >
+    <h2 style="text-align: center;margin-top:0px;">Registration </h2>
+    {{input class="box" type="text" value=name placeholder="College Name" required=true}} <br>
+   
+    {{input class="box" value=address type="text" placeholder="Address" required=true}}<br>
+    
+    {{input class="box" value=pincode type="number" placeholder="Pincode" required=true}}<br>
+   
+    {{input  class="box" value=mobile type="number" placeholder="Mobile" required=true}}<br>
+   
+    {{input  class="box" value=email type="text" placeholder="Email" required=true}}<br>
+    
+    {{input class="box" value=password type="password" placeholder="Password" required=true}}<br>
+    <br>
+    <button type="submit" class="button">Register</button> <br><p style="text-align: center;font-size:large;margin:20px;">or</p>
+     {{#link-to 'login'}}
+        <button class="button" style="margin-top: 5px;position:relative;left:12px;">Login</button>
+    {{/link-to}}
+</form>
+</div>
+{{outlet}}

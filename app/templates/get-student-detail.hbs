@@ -1,0 +1,17 @@
+{{log this.model}}
+{{#each model as |result|}}
+<div class="card1" id="card1">
+<h2 class="card-head"> {{result.name}}({{result.department}})</h2>
+<br>
+<h3 class="card-text"><b>Age: </b>{{result.age}}</h3><br>
+<h3 class="card-text"><b>Gender: </b>{{result.gender}}</h3><br>
+<h3 class="card-text"><b>Address: </b>{{result.address}}</h3><br>
+<h3 class="card-text"><b>Pincode: </b>{{result.pincode}}</h3><br>
+<h3 class="card-text"><b>Mobile: </b>{{result.mobile}}</h3><br>
+<h3 class="card-text"><b>Email: </b>{{result.email}}</h3><br>
+    
+<button class="button4" {{action 'click_div'}}>Back</button>
+
+</div>
+{{/each}}
+{{outlet}}

@@ -1,0 +1,14 @@
+<div class="form">
+<form class="form1" style="height:240px" id="loginForm" {{action "sendRequest"  on="submit" }} >
+    {{input class="box" type="text" value=email placeholder="Email"}} <br>
+    {{input class="box" value=password type="password" placeholder="password"}}
+    
+    <br>
+    <button type="submit" class="button" >Login</button>
+    <p style="text-align: center;font-size:large;margin:5px;position:relative;left:-12px;">or</p>
+    {{#link-to 'registration'}}
+        <button class="button" style="margin-top: 5px;position:relative;left:-12px;">Register</button>
+    {{/link-to}}
+</form>
+</div>
+{{outlet}}

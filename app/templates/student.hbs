@@ -1,0 +1,19 @@
+{{nav-bar role=model.role}}
+
+<div class="nav element">
+{{#link-to 'student.addStudent'  class="nav-element "}}
+    Add Student
+{{/link-to}}
+
+{{#link-to 'student.viewStudent' class="nav-element "}}
+    View Student
+{{/link-to}}
+
+{{#if (check model.role)}}
+    {{#link-to 'student.pendingStudentList' class="nav-element "}}
+        Approve Student
+    {{/link-to}}
+{{/if}}
+
+</div>
+{{outlet}}

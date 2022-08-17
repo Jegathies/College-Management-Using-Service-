@@ -1,0 +1,33 @@
+
+
+{{!-- <div class="row" disabled="true" onmouseenter={{action "toggleProperty"}} onmouseleave={{action "toggleProperty"}}> --}}
+
+{{#if deleteComp}}
+<div class="row" id="component" onclick={{action 'click_comp'}} >
+
+<h3 style="text-decoration:none;" > {{result.name}}<p style="text-decoration:none;" class="text-right">{{result.yearOfJoining}}</p></h3>
+</div>
+
+{{#if show}}
+<div class="card1" id="card1">
+<h2 class="card-head"> {{result.name}}({{result.department}})</h2>
+<br>
+<h3 class="card-text"><b>Age: </b>{{result.age}}</h3><br>
+<h3 class="card-text"><b>Gender: </b>{{result.gender}}</h3><br>
+<h3 class="card-text"><b>Address: </b>{{result.address}}</h3><br>
+<h3 class="card-text"><b>Pincode: </b>{{result.pincode}}</h3><br>
+<h3 class="card-text"><b>Mobile: </b>{{result.mobile}}</h3><br>
+<h3 class="card-text"><b>Email: </b>{{result.email}}</h3><br>
+    {{#if (status result.status)}}
+        <button class="button4" {{action 'approveStudent'}}>Approve</button>
+        <button class="buttonExit" {{action 'click_div'}}>exit</button>
+    {{else}}
+        <button class="button4" {{action 'click_div'}}>exit</button>
+    {{/if}}
+</div>
+{{/if}}
+
+{{/if}}
+
+
+{{yield }}

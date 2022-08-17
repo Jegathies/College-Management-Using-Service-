@@ -1,0 +1,17 @@
+ <form class="form5" id="staffForm" {{action "addStaff"  on="submit" }} >{{!--{{action "addStudent"  on="submit" }} --}}
+   <h2 style="text-align: center;margin-top:0px;">Add Staff</h2>
+    {{input  class="box" type="text" value=name placeholder="Staff Name" required=true}} <br>
+
+     <select id="depart"  class="box" >
+        {{#each model as |dep|}}
+            <option value={{dep}}>{{dep}}</option>
+        {{/each}}
+    </select><br>
+
+    {{input  class="box" type="text" value=email placeholder="Email" required=true}}<br>  
+
+    {{input  class="box" type="text" value=password placeholder="password" required=true}}<br>
+
+    <button type="submit" class="button" >Add</button>
+</form>
+{{outlet}}

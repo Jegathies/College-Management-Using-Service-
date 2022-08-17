@@ -1,0 +1,14 @@
+{{nav-bar role=model.role}}
+
+<div class="nav element">
+    {{#if (check model.role)}}
+        {{#link-to 'department.addDepartment' class="nav-element "}}
+            Add Department
+        {{/link-to}}
+    {{/if}}
+
+{{#link-to 'department.viewDepartment' class="nav-element "}}
+    View Department
+{{/link-to}}
+</div>
+{{outlet}}

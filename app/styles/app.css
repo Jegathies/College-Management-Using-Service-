@@ -1,0 +1,275 @@
+body
+{
+    background: linear-gradient(90deg,#49b1f7,#a152c3);
+}
+
+.form1,.form2,.form3,.form4,.form5
+{
+    margin:20px;
+    padding:60px;
+    border:1px solid gray;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    border-radius: 20px;
+    background-color: white;
+    width: 300px;
+    height:170px;
+}
+
+.form2{
+    height:650px;
+}
+.form3{
+    width:400px;
+    height:130px;
+}
+.form4{
+    height:630px;
+    top:55%
+}
+.form5
+{
+    width:300px;
+    height:400px;
+}
+.box
+{
+    width: 300px;
+    border: none;
+    border-bottom: 2px solid gray;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: medium;
+    outline: none;
+}
+.box:hover{
+    border-bottom: 2px solid  rgb(169, 90, 247);
+}
+.button,.button1,.button2,.button4,.buttonExit,.button6
+{
+    padding:10px;
+    border-radius: 5px;
+    font-size: medium;
+    background-color: rgb(169, 90, 247);
+    color: white;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+.button1{
+    position:relative;
+    top:-85px;
+    left:230px;
+    padding: 8px;
+}
+.button4{
+    position:relative;
+    top:-10px;
+    left:250px;
+    padding: 10px;
+    width:100px;
+}
+.buttonExit{
+    position:relative;
+    top:-10px;
+    left:-70px;
+    padding: 10px;
+    width:100px;
+}
+.button:hover,.button2:hover,.button1:hover,.button4:hover,.buttonExit:hover,.button6:hover{
+    background-color:rgb(254, 254, 254) ;
+    color: rgb(169, 90, 247);
+    border:2px solid rgb(169, 90, 247);
+}
+.button6{
+    position:relative;
+    left:200px;
+    background-color: #49b1f7;
+}
+.nav
+{
+    padding: 15px;
+    background:linear-gradient(180deg,rgb(239, 238, 241),rgb(255, 255, 255));
+    
+}
+.nav-element
+{
+    display: inline-block;
+    font-size: 22px;
+    text-decoration: none;
+    margin-right: 30px;
+    font-style: oblique;
+}
+.nav-element:hover{
+   color: #484efc;
+}
+
+.department
+{
+    background-color: azure;
+    padding: 15px;
+    margin: 10px;
+    font-size: large;
+    font-style: oblique;
+    border-radius: 30px;
+}
+.department:hover{
+    box-shadow: 4px 4px 4px rgb(233, 211, 255);
+    border: 1px solid rgb(169, 90, 247);
+}
+.dep-view
+{
+    text-align: center;
+    width: 500px;
+    position: relative;
+    left: 600px;
+}
+.dep-button
+{
+    position: absolute;
+    top:130px;
+    left:20px;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: medium;
+    font-style: oblique;
+    margin-bottom: 15px;
+    background-color: rgb(169, 90, 247);
+    color: white;
+    border:2px solid rgb(169, 90, 247) ;
+    outline:none;
+}
+
+.dep-button:hover{
+    background-color:azure;
+    color: rgb(169, 90, 247);
+    border:2px solid rgb(169, 90, 247);
+}
+
+#make-align-left
+{
+    text-align: left;
+}
+
+.card
+{
+    background-color: white;
+    width: 480px;
+    padding:20px;
+    margin:10px;
+    float:left;
+    border-radius: 10px;
+    transition: box-shadow 0.5s;
+}
+.card1
+{
+    background-color: white;
+    width: 450px;
+    height:500px;
+    padding:25px;
+    text-align: justify;
+    float:left;
+    border-radius: 10px;
+    transition: box-shadow 0.5s;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index: 1;
+    border:2px solid gray;
+
+}
+.make-Transparent
+{
+    color:transparent;
+    background-color: transparent;
+}
+.card-in
+{
+    font-size: large;
+    font-style: oblique;
+}
+.card:hover,.card1:hover{
+    box-shadow: 0 0 4px 4px  rgb(191, 126, 248);
+}
+
+.card-text
+{
+    font-size: large;
+    font-style: oblique;
+    padding: 0px;
+    margin: -1px;
+    text-decoration: none;
+}
+.card-head
+{
+    background-color: #be9bcd;
+    padding: 25px;
+}
+.wrap-it
+{
+    text-align: center;
+}
+.button2
+{
+    margin-left: 2px;
+}
+.box1,.box2,.box3
+{
+    padding: 15px;
+    width:500px;
+    font-size: medium;
+    font-style: oblique;
+    margin-bottom: 20px;
+}
+.box2{
+   position: relative;
+   top: 78px;
+   left:-350px ;
+   height: 56px;
+}
+.box3{
+   position: relative;
+   top: 2px;
+   left:250px ;
+   height: 56px;
+}
+.row
+{
+    background-color: azure;
+    padding: 1px;
+    padding-left: 50px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    width: 650px;
+    position: relative;
+    left: 480px;
+
+}
+.text-right
+{
+    float:right;
+    position: relative;
+    top:-20px;
+    right:60px;
+}
+
+.bluring
+{
+    filter: blur(10px);
+}
+.preventAction
+{
+   pointer-events: none;
+   user-select: none;
+
+}
+#User
+{
+    float:right;
+    position:relative;
+    top:-20px;
+    color: rgb(75, 121, 53);
+}
+

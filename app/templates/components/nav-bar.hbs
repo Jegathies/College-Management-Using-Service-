@@ -1,0 +1,17 @@
+<div class="nav">
+        {{#link-to  'department' class="nav-element"}}  
+            Department
+        {{/link-to}}
+        {{#link-to 'student' class="nav-element"}}
+            Student  
+        {{/link-to}}
+        {{#if (check role)}}
+            {{#link-to 'staff' class="nav-element "}}
+                Staff
+            {{/link-to}}
+        {{/if}}
+    <p id="User" class="nav-element ">{{role}}</p>
+</div>
+{{yield }}
+
+

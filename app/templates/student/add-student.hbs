@@ -1,0 +1,40 @@
+<br>
+
+<form class="form4" id="studentForm" {{action "addStudent"  on="submit" }} >
+   <h2 style="text-align: center;margin-top:0px;">Add Student</h2>
+    {{input  class="box" type="text" value=name placeholder="Student Name" required=true}} <br>
+    {{!-- onchange={{action 'setGender'}} --}}
+
+
+    <select id="gender"  class="box" >
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+    </select><br>
+
+    
+    {{input  class="box" type="number" value=age min="17" max="50" placeholder="Age" required=true}}<br>
+
+     <select id="depart"  class="box" >
+        {{#each model as |dep|}}
+            <option value={{dep}}>{{dep}}</option>
+        {{/each}}
+    </select><br>
+    
+    {{input  class="box" type="number" value=year placeholder="Year of Joining" min="2016" max="2022" required=true}}<br>
+    
+    {{input  class="box" type="text" value=address placeholder="Address" required=true}}<br>
+
+   
+    {{input  class="box" type="text" value=pincode placeholder="Pincode" required=true}}<br>
+
+    
+    {{input  class="box" type="number" value=mobile placeholder="Mobile"  required=true}}<br>
+
+   
+    
+    {{input  class="box" type="text" value=email placeholder="Email" required=true}}<br>
+    
+    <button type="submit" class="button" >Add</button>
+</form>
+{{outlet}}
